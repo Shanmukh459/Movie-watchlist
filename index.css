@@ -2,3 +2,43 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+body {
+    max-width: 550px;
+}
+
+/* Typography */
+
+h1 {
+    margin: 0;
+}
+
+header {
+    background: url("./images/header.png");
+    display: flex;
+    padding: 5rem 2rem;
+    justify-content: space-between;
+    color: #ffffff;
+    position: relative;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: #ffffff;
+}
+
+.search {
+    display: flex;
+    width: 80%;
+    position: absolute;
+    bottom: -1.5rem;
+    background: #ffffff;
+    color: black;
+}
+
+.search-icon, .search-btn {
+    margin: auto;
+}
+
+
