@@ -1,5 +1,6 @@
 const searchBtn = document.getElementById("search-btn")
 const APIKEY = "46677be2"
+let movieData
 
 searchBtn.addEventListener("click", function(e) {
     e.preventDefault()
@@ -8,9 +9,17 @@ searchBtn.addEventListener("click", function(e) {
 
 function getMovies() {
     const searchText = document.getElementById("search-text").value
-    console.log(searchText.split(" ").join("+"))
 
-    fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&t=${searchText}`)
+    fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`)
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            movieData = data.Search
+            displaySearchResults(movieData)
+            console.log(data)
+            console.log(movieData)
+        })
+}
+
+function displaySearchResults(movies) {
+    
 }
