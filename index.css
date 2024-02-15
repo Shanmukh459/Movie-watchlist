@@ -9,13 +9,15 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 0.875rem;
     margin: auto;
+    border: red 1px solid;
 }
 
 /* =============== */
 /*     HEADER      */
 /* =============== */
 
-h1 {
+h1,
+h3 {
     margin: 0;
 }
 header {
@@ -69,4 +71,34 @@ header button {
     margin: auto;
 }
 
+/* ==================== */
+/*     Main section     */
+/* ==================== */
 
+
+main {
+   margin-top: 2rem; 
+   padding: 2rem;
+}
+
+.movie-card {
+    display: flex;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.movie-poster {
+    max-width: 100px;
+}
+
+.movie-info {
+    padding: 1rem 0.5rem;
+
+}
+
+.title-rating-sec,
+.duration-genre-sec {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

@@ -20,22 +20,22 @@ function renderMovies() {
                     .then(res => res.json())
                     .then(movieData => {
                         moviesHtml +=  `
-                        <div>
+                        <div class="movie-card">
                             <div>
-                                <img src=${movieData.Poster}>
+                                <img class="movie-poster" src=${movieData.Poster}>
                             </div>
-                            <div>
-                                <div>
-                                    <h1>${movieData.Title}</h1>
+                            <div class="movie-info">
+                                <div class="title-rating-sec">
+                                    <h3>${movieData.Title}</h3>
                                     <img src="./images/star.png">
                                     <h3>${movieData.imdbRating}</h3>
                                 </div>
-                                <div>
+                                <div class="duration-genre-sec">
                                     <p>${movieData.Runtime}</p>
                                     <p>${movieData.Genre}</p>
                                     <button>Watchlist</button>
                                 </div>
-                                <div>
+                                <div class="plot">
                                     <p>${movieData.Plot}
                                 </div>
                             </div>
