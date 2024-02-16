@@ -1,14 +1,40 @@
 const searchBtn = document.getElementById("search-btn")
+const pageSwitchBtn = document.getElementById("page-switch-btn")
+const title = document.getElementById("title")
 const main = document.querySelector("main")
 const APIKEY = "46677be2"
 let allMoviesData
 
-searchBtn.addEventListener("click", function(e) {
+pageSwitchBtn.addEventListener("click", (e) => {
     e.preventDefault()
-    renderMovies()
+    console.log(e.target.innerText)
+    handlePageSwitch(e.target.innerText)
 })
 
-function renderMovies() {
+searchBtn.addEventListener("click", function(e) {
+    e.preventDefault()
+    fetchMovies()
+})
+
+function handlePageSwitch(btnText) {
+    if(btnText === "My Watchlist") {
+        renderWatchList()
+    } else {
+        renderHomePage()
+    }
+}
+
+function renderWatchList() {
+    title.innerText = "My Watchlist"
+    pageSwitchBtn.innerText = "Search for movies"
+}
+
+function renderHomePage() {
+    title.innerText = "Find your film"
+    pageSwitchBtn.innerText = "My Watchlist"
+}
+
+function fetchMovies() {
     const searchText = document.getElementById("search-text").value
     let moviesHtml = ""
     fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`)
