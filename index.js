@@ -26,14 +26,16 @@ function renderMovies() {
                             </div>
                             <div class="movie-info">
                                 <div class="title-rating-sec">
-                                    <h3>${movieData.Title}</h3>
+                                    <p class="movie-title">${movieData.Title}</p>
                                     <img src="./images/star.png">
-                                    <h3>${movieData.imdbRating}</h3>
+                                    <p class="movie-rating">${movieData.imdbRating}</p>
                                 </div>
                                 <div class="duration-genre-sec">
-                                    <p>${movieData.Runtime}</p>
-                                    <p>${movieData.Genre}</p>
-                                    <button>Watchlist</button>
+                                    <p class="movie-runtime">${movieData.Runtime}</p>
+                                    <p class="movie-genre">${movieData.Genre}</p>
+                                    <button class="watchlist-btn">
+                                    <img src="./images/plus.png">
+                                    <p class="watchlist-btn-text">Watchlist</p></button>
                                 </div>
                                 <div class="plot">
                                     <p>${movieData.Plot}

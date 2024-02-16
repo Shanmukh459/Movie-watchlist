@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -17,7 +21,8 @@ body {
 /* =============== */
 
 h1,
-h3 {
+h3,
+p {
     margin: 0;
 }
 header {
@@ -78,13 +83,35 @@ header button {
 
 main {
    margin-top: 2rem; 
-   padding: 2rem;
+   padding: 2rem 3rem;
 }
 
+.main-default {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.main-img {
+    max-width: 70px;
+} 
+
+.default-main-text {
+    opacity: 0.2;
+}
 .movie-card {
     display: flex;
     color: #ffffff;
     box-sizing: border-box;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #A5A5A5;
+    align-items: center;
 }
 
 .movie-poster {
@@ -100,5 +127,40 @@ main {
 .duration-genre-sec {
     display: flex;
     align-items: center;
+}
+
+.title-rating-sec {
     gap: 0.5rem;
+}
+
+.duration-genre-sec {
+    margin: 0.5rem 0;
+    gap: 1rem;
+}
+
+.movie-title {
+    font-size: 1.25rem;
+}
+
+.movie-rating,
+.movie-runtime,
+.movie-genre,
+.watchlist-btn {
+    font-size: 0.75rem;
+}
+
+.watchlist-btn {
+    display: flex;
+    background: none;
+    border: none;
+    color: #ffffff;
+    gap: 0.25rem;
+}
+
+.watchlist-btn-text {
+    margin: auto;
+}
+
+.plot {
+    color: #A5A5A5
 }
