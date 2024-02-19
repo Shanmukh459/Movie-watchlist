@@ -19,36 +19,37 @@ searchBtn.addEventListener("click", function(e) {
 
 document.addEventListener("click", (e) => {
     e.preventDefault()
+    console.log(e.target.dataset.movie)
     if (e.target.dataset.movie) {
         const id = e.target.dataset.movie
         fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&i=${id}`)
-                        .then(res => res.json())
-                        .then(movieData => {
-                            // console.log(JSON.stringify(movieData))
-                            watchlistHtml +=  `
-                            <div class="movie-card">
-                                <div>
-                                    <img class="movie-poster" src=${movieData.Poster}>
-                                </div>
-                                <div class="movie-info">
-                                    <div class="title-rating-sec">
-                                        <p class="movie-title">${movieData.Title}</p>
-                                        <img src="./images/star.png">
-                                        <p class="movie-rating">${movieData.imdbRating}</p>
-                                    </div>
-                                    <div class="duration-genre-sec">
-                                        <p class="movie-runtime">${movieData.Runtime}</p>
-                                        <p class="movie-genre">${movieData.Genre}</p>
-                                        <button class="watchlist-btn" data-movie=${movieData.imdbID}>
-                                        <img src="./images/plus.png" data-movie=${movieData.imdbID}>
-                                        <p class="watchlist-btn-text" data-movie="${movieData.imdbID}">Watchlist</p></button>
-                                    </div>
-                                    <div class="plot">
-                                        <p>${movieData.Plot}
-                                    </div>
-                                </div>
-                            </div>`
-                        })
+            .then(res => res.json())
+            .then(movieData => {
+                // console.log(JSON.stringify(movieData))
+                watchlistHtml +=  `
+                <div class="movie-card">
+                    <div>
+                        <img class="movie-poster" src=${movieData.Poster}>
+                    </div>
+                    <div class="movie-info">
+                        <div class="title-rating-sec">
+                            <p class="movie-title">${movieData.Title}</p>
+                            <img src="./images/star.png">
+                            <p class="movie-rating">${movieData.imdbRating}</p>
+                        </div>
+                        <div class="duration-genre-sec">
+                            <p class="movie-runtime">${movieData.Runtime}</p>
+                            <p class="movie-genre">${movieData.Genre}</p>
+                            <button class="watchlist-btn" data-movie=${movieData.imdbID}>
+                            <img src="./images/plus.png" data-movie=${movieData.imdbID}>
+                            <p class="watchlist-btn-text" data-movie="${movieData.imdbID}">Watchlist</p></button>
+                        </div>
+                        <div class="plot">
+                            <p>${movieData.Plot}
+                        </div>
+                    </div>
+                </div>`
+            })
         }
 })
 
@@ -63,7 +64,7 @@ function handlePageSwitch(btnText) {
 function renderWatchList() {
     title.innerText = "My Watchlist"
     pageSwitchBtn.innerText = "Search for movies"
-    main.innerHTML = "HellO!"
+    main.innerHTML = watchlistHtml
 }
 
 function renderHomePage() {
