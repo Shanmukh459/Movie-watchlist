@@ -4,7 +4,9 @@ const title = document.getElementById("title")
 const main = document.querySelector("main")
 const APIKEY = "46677be2"
 let allMoviesData
-let watchlistHtml = ""
+let watchlistHtml = localStorage.getItem("watchlistHtml") || ""
+
+console.log(watchlistHtml)
 
 pageSwitchBtn.addEventListener("click", (e) => {
     e.preventDefault()
@@ -41,14 +43,15 @@ document.addEventListener("click", (e) => {
                             <p class="movie-runtime">${movieData.Runtime}</p>
                             <p class="movie-genre">${movieData.Genre}</p>
                             <button class="watchlist-btn" data-movie=${movieData.imdbID}>
-                            <img src="./images/plus.png" data-movie=${movieData.imdbID}>
-                            <p class="watchlist-btn-text" data-movie="${movieData.imdbID}">Watchlist</p></button>
+                            <img src="./images/minus.png" data-movie=${movieData.imdbID}>
+                            <p class="watchlist-btn-text" data-movie="${movieData.imdbID}">Remove</p></button>
                         </div>
                         <div class="plot">
                             <p>${movieData.Plot}
                         </div>
                     </div>
                 </div>`
+                localStorage.setItem("watchlistHtml", watchlistHtml)
             })
         }
 })
