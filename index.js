@@ -57,10 +57,12 @@ function handlePageSwitch(btnText) {
 function renderWatchList() {
     title.innerText = "My Watchlist"
     pageSwitchBtn.innerText = "Search for movies"
+    searchBtn.disabled = true
     main.innerHTML = getWatchlistHtml()
 }
 
 function renderHomePage() {
+    searchBtn.disabled = false
     title.innerText = "Find your film"
     pageSwitchBtn.innerText = "My Watchlist"
     main.innerHTML = getHomeHtml()
