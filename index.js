@@ -4,7 +4,7 @@ const title = document.getElementById("title")
 const main = document.querySelector("main")
 const APIKEY = "46677be2"
 let allMoviesData
-let watchlistArr = JSON.parse(localStorage.getItem("watchlistArr")) ||getDefaultWatchlistHtml()
+let watchlistArr = JSON.parse(localStorage.getItem("watchlistArr")) || []
 
 
 pageSwitchBtn.addEventListener("click", (e) => {
