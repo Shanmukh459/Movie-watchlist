@@ -23,6 +23,15 @@
 
 _Search page_
 
+![image](https://github.com/Shanmukh459/Movie-watchlist/assets/52078988/19dda8ed-8c09-44e1-b075-609395ec5562)
+
+![image](https://github.com/Shanmukh459/Movie-watchlist/assets/52078988/d620897d-9c5e-4f7e-a277-84fd90b805b6)
+
+
+
 _Watchlist Page_
+
+![image](https://github.com/Shanmukh459/Movie-watchlist/assets/52078988/a6968559-4e72-4295-8f05-2455551ac5bb)
+
 
 Happy Coding!
