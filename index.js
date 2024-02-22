@@ -22,7 +22,7 @@ document.addEventListener("click", (e) => {
     if (e.target.dataset.movie) {
         const id = e.target.dataset.movie
         if(e.target.innerHTML === "Watchlist" || e.target.alt === "watchlist") {
-            fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&i=${id}`)
+            fetch(`https://www.omdbapi.com/?apikey=${APIKEY}&i=${id}`)
                 .then(res => res.json())
                 .then(movieData => {
                     watchlistArr.push({
@@ -73,12 +73,12 @@ function fetchMovies() {
     document.getElementById("search-text").value = ""
     let moviesHtml = ""
     if (searchText) {
-        fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`)
+        fetch(`https://www.omdbapi.com/?apikey=${APIKEY}&s=${searchText}`)
             .then(res => res.json())
             .then(allMoviesData => {
                 console.log(allMoviesData)
                 allMoviesData.Search.forEach(movie => {
-                    fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&i=${movie.imdbID}`)
+                    fetch(`https://www.omdbapi.com/?apikey=${APIKEY}&i=${movie.imdbID}`)
                         .then(res => res.json())
                         .then(movieData => {
                             // console.log(JSON.stringify(movieData))
