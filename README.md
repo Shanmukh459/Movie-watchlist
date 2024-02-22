@@ -1,21 +1,28 @@
-# co0a24985872b20458f37bc22
+# Movie Watchlist
 
-Quick start:
+- Often faced this situation where you had a movie in your mind to watch later and when you finally got time to watch you forgot the name of it??
+- This application is the perfect solution for such situations
+- This is a web application which pulls the data from (OMDB)[https://www.omdbapi.com/] API to fetch the movies
+- There are two screen
+  - One is the search page where users can search movies/series and add them to their watchlist
+  - Next one is the watchlist where users can view the list pf movies/series added to watchlist
+- User will have the ability to remove an item from the watchlist
+- The application uses local storage to store the info. So the list doesn't disapear after a refresh
 
-```
-$ npm install
-$ npm start
-````
+### Tech Used ⚙️
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+- HTML
+- CSS
+- JavaScript
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+### Deployed at 🌩️
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+- https://movie-watchlist-shanmukh.vercel.app/
+
+### Screenshots
+
+_Search page_
+
+_Watchlist Page_
 
 Happy Coding!
